@@ -10,7 +10,7 @@ include 'includes/header.php';
     <div><label class="label label-success" for="prodId">Product: </label>
     <input type="text" id="prodId" name="product" required /></div>
     <div><label class="label label-success" for="epenseId">Expense: </label>
-    <input type="number" id="epenseId" name="expense" required step="any" min="0.01" /></div>
+    <input type="number" id="expenseId" name="expense" required step="any" min="0.01" /></div>
     <div><label class="label label-success" for="catId">Category: </label>
     <input type="text" id="catId" name="category" /></div>        
     <div><input class="btn btn-success" type="submit" value="Submit" /></div>
