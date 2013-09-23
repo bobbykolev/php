@@ -5,7 +5,7 @@
 2013-08-22!Celery!2.2!Vegetables
 2013-09-01!sfsdf&lt;br&gt;dsfsdfff!0.01!&lt;script&gt;alert(&quot;script test&quot;);&lt;/script&gt;
 2013-09-30!Onion!0.4!Vegetables
-2013-09-01!dsadsadasdasdsadasdasdddddd!1.01!sadsadsadsadsadsad
+2013-09-01!dsadsadasdasdsadasdasdddddd!0.01!sadsadsadsadsadsad
 2013-12-01!読点!5!HAck
 19-09-2013!Боза!-123!Hack
 10-09-2013!Боза #2!000000000000000005!Hack

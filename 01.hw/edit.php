@@ -7,11 +7,11 @@ include 'includes/header.php';
 <h1><?= $pageTitle; ?></h1>
   <?php 
     $date = trim($_POST['date']);
-    $date =  str_replace('!', '', $date);
+   	$date =  htmlspecialchars(str_replace('!', '', $date), ENT_QUOTES);
     $product = trim($_POST['product']);
     $product =  htmlspecialchars(str_replace('!', '', $product), ENT_QUOTES);
 	$expense = trim($_POST['expense']);
-    $expense =  str_replace('!', '', $expense);
+    $expense =  htmlspecialchars(str_replace('!', '', $expense), ENT_QUOTES);
 	$category = trim($_POST['category']);
     $category =  htmlspecialchars(str_replace('!', '', $category), ENT_QUOTES);
     $error=false;
