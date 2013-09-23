@@ -1,0 +1,7 @@
+﻿2013-09-22!Strawberries!3.50!Fruits!
+2013-09-22!Spinach!0.50!Vegetables!
+2013-09-22!Walnuts!7.20!Nuts
+2013-09-22!Ginger!4.1!Roots
+2013-08-22!Celery!2.2!Vegetables
+2013-09-01!sfsdf&lt;br&gt;dsfsdf!0.01!&lt;script&gt;alert(&quot;script test&quot;);&lt;/script&gt;
+2013-09-30!Onion!0.4!Vegetables
