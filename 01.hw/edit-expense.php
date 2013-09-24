@@ -20,7 +20,7 @@ if(isset($_GET['id']))
 	$oldDate =  $exploded[0];
 	$oldProduct =  $exploded[1];
 	$oldExpense =  $exploded[2];
-	$oldCat =  $exploded[3];
+	$oldCat =  $categories[trim($exploded[3])];
 }
 else
 {
@@ -48,7 +48,19 @@ else
     </div>
     <div>
       <label class="label label-success" for="catId">Category: </label>
-      <input type="text" id="catId" name="category" value="<?php echo $oldCat; ?>" required="required" />
+      <select name="category" selected>
+        <?php
+            foreach ($categories as $key=>$val) {
+				if($val==$oldCat){
+					echo '<option selected="selected" value="'.$key.'">' . $val .
+                        '</option>';
+					}else{
+                echo '<option value="'.$key.'">' . $val .
+                        '</option>';
+					}
+            }
+            ?>
+      </select>
     </div>
     <div>
       <input class="btn btn-success" type="submit"   onClick="return confirm(\'Are you sure you want to submit change?\')" value="Submit"/>

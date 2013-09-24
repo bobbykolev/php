@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+include 'includes/constants.php'
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +32,9 @@
 										<li><a href="index.php">Home</a></li>
                                         <li class="divider-vertical"></li>
 										<li><a href="create-expense.php">Create New Expense</a></li>	
-                                        <li class="divider-vertical"></li>									
+                                        <li class="divider-vertical"></li>
+                                        <li><a href="create-category.php">Create New Category</a></li>	
+                                        <li class="divider-vertical"></li>											
 									</ul>
 								</div>
         

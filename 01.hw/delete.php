@@ -2,13 +2,20 @@
 $pageTitle = "Delete Expense";
 include 'includes/header.php';
 ?>
-<div class="hero-unit">
+<div class="hero-unit  offset1 span10">
 <h1><?= $pageTitle; ?></h1>
 
 <?php 
 if(isset($_GET['id']))
 {
-	$row = $_GET['id'];
+	$inputId = $_GET['id'];
+	if(ctype_digit($inputId)){
+			$row = $inputId;
+		}else
+		{			
+    		header("refresh:0;url=error.php");
+		}
+
 	$data = 'data.txt';
 	$fileConteiner = file($data);
 	$rowToDelete = $fileConteiner[$row];

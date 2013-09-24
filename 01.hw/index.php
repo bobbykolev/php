@@ -28,7 +28,7 @@ include 'includes/header.php';
                 <td>'.$columns[0].'</td>
                 <td>'.$columns[1].'</td>
                 <td>'.number_format($columns[2], 2, '.','').'</td>
-				<td>'.$columns[3].'</td>
+				<td>'.$categories[trim($columns[3])].'</td>
 				<td><a href="edit-expense.php?id='.$id.'" data-toggle="tooltip" title="Edit"><i class="icon-edit"></i></a></td>
 				<td><a href="delete.php?id='.$id.'" data-toggle="tooltip" title="Delete" onClick="return confirm(\'Are you sure you want to delete '.$columns[1].'?\')"><i class="icon-remove"></i></a></td>
                 </tr>';

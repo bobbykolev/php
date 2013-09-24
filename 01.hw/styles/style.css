@@ -19,7 +19,7 @@ footer
 	padding: 4px;
 	margin-bottom: 4px;
 }
-input[type="date"], input[type="text"], input[type="number"], input[type="submit"]
+input[type="date"], input[type="text"], input[type="number"], input[type="submit"], select
 {
 	margin-bottom: 0;
 	float:right;
