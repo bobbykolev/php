@@ -10,7 +10,7 @@ include 'includes/header.php';
    	$date =  htmlspecialchars(str_replace('!', '', $date), ENT_QUOTES);
     $product = trim($_POST['product']);
     $product =  htmlspecialchars(str_replace('!', '', $product), ENT_QUOTES);
-	$expense = trim($_POST['expense']);
+	$expense = ltrim($_POST['expense'], '0');
     $expense =  htmlspecialchars(str_replace('!', '', $expense), ENT_QUOTES);
 	$category = trim($_POST['category']);
     $category =  htmlspecialchars(str_replace('!', '', $category), ENT_QUOTES);
@@ -28,7 +28,7 @@ include 'includes/header.php';
         $error=true;
     }
     
-    if(!is_numeric($expense)){
+    if(!is_numeric($expense) || floatval($expense) > 10000000 || floatval($expense) < 0.01){
         echo '<p class="lead">Invalid expense.</p>';
 		header("refresh:3;url=create-expense.php");
         $error=true;
