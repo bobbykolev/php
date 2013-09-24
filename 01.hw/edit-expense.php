@@ -24,8 +24,7 @@ if(isset($_GET['id']))
 }
 else
 {
-	echo '<p class="lead">Incorect data.</p>';
-    header("refresh:2;url=index.php");
+    header("refresh:0;url=error.php");
 }
 ?>
 

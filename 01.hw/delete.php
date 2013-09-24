@@ -24,7 +24,7 @@ if(isset($_GET['id']))
     file_put_contents($data, $fileContent);
 	
 	echo '<p class="lead">Product was successfuly deleted.</p>';
-    header("refresh:2;url=index.php");
+    header("refresh:1;url=index.php");
 }
 else
 {

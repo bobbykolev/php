@@ -12,6 +12,11 @@ include 'includes/header.php';
 		header("refresh:2;url=create-category.php");
         $error=true;
     }
+	if(is_numeric($newCategory[0])){
+        echo '<p class="lead">The category name cannot start with number.</p>';
+		header("refresh:2;url=create-category.php");
+        $error=true;
+    }
         foreach($categories as $val){
 			if(strtolower($val) == strtolower($newCategory))
 			{
@@ -26,7 +31,7 @@ include 'includes/header.php';
     		fwrite($file, $newdata);
     		fclose($file);
             echo '<p class="lead">'.$newCategory.' successfuly added.';
-			header("refresh:2;url=index.php");
+			header("refresh:1;url=index.php");
     }
 }
 ?>
