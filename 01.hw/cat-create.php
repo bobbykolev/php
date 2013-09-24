@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = "Create New Category";
+$pageTitle = "New Category";
 include 'includes/header.php';
 ?>
 <div class="hero-unit offset1 span5">

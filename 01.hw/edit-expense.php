@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Delete Expense";
+$pageTitle = "Edit the Expense";
 include 'includes/header.php';
 ?>
 <?php 

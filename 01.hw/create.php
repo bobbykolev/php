@@ -12,8 +12,6 @@ include 'includes/header.php';
     $product =  htmlspecialchars(str_replace('!', '', $product), ENT_QUOTES);
 	$expense = ltrim($_POST['expense'], '0');
     $expense =  htmlspecialchars(str_replace('!', '', $expense), ENT_QUOTES);
-	/*?>$category = trim($_POST['category']);
-    $category =  htmlspecialchars(str_replace('!', '', $category), ENT_QUOTES);<?php */
 	$category = (int)$_POST['category'];
     $error=false;
 	
