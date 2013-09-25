@@ -27,7 +27,7 @@ if ($_POST) {
     }
     if (!$error) {
         $file    = fopen("includes/constants.php", "a");
-        $newdata = 'array_push($categories, "' . ucfirst(strtolower($newCategory)) . '");';
+        $newdata = PHP_EOL.'array_push($categories, "' . ucfirst(strtolower($newCategory)) . '");';
         fwrite($file, $newdata);
         fclose($file);
         echo '<p class="lead">' . $newCategory . ' successfuly added.';
