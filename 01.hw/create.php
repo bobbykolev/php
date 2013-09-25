@@ -6,32 +6,26 @@ include 'includes/header.php';
 <div class="hero-unit offset1 span10">
 <h1><?= $pageTitle; ?></h1>
   <?php 
-    $date = trim($_POST['date']);
-    $date =  htmlspecialchars(str_replace('!', '', $date), ENT_QUOTES);
-    $product = trim($_POST['product']);
-    $product =  htmlspecialchars(str_replace('!', '', $product), ENT_QUOTES);
-	$expense = ltrim($_POST['expense'], '0');
-    $expense =  htmlspecialchars(str_replace('!', '', $expense), ENT_QUOTES);
-	$category = (int)$_POST['category'];
-    $error=false;
+  //Here I use the function edit_create(...) from constants.php file to avoid code repeating
+   $postData = edit_create( $_POST['date'],  $_POST['product'],  $_POST['expense'],  $_POST['category']);
 	
-    if(mb_strlen($product)<4){
+    if(mb_strlen($postData[1])<4){
         echo '<p class="lead">The product name is too short.</p>';
 		header("refresh:2;url=create-expense.php");
-        $error=true;
+        $postData[4]=true;
     }
 	    
-    if(!is_numeric($expense) || floatval($expense) > 10000000 || floatval($expense) < 0.01){
+    if(!is_numeric($postData[2]) || floatval($postData[2]) > 10000000 || floatval($postData[2]) < 0.01){
         echo '<p class="lead">Invalid expense.</p>';
 		header("refresh:2;url=create-expense.php");
-        $error=true;
+        $postData[4]=true;
     }
     
-    if(!$error){
-        $result = $date.'!'.$product.'!'.$expense.'!'.$category."\n";
+    if(!$postData[4]){
+        $result = $postData[0].'!'.$postData[1].'!'.$postData[2].'!'.$postData[3]."\n";
         if(file_put_contents('data.txt', $result,FILE_APPEND))
         {
-            echo '<p class="lead">"'.$product.'" successfuly added.</p>';
+            echo '<p class="lead">"'.$postData[1].'" successfuly added.</p>';
 			header("refresh:1;url=index.php");
         }
     } ?>
