@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pageTitle = "Create New Expense";
 include 'includes/header.php';
 ?>
@@ -15,16 +15,15 @@ include 'includes/header.php';
     <!--<input type="text" id="catId" name="category" /></div> --> 
         <select name="category">
             <?php
-            foreach ($categories as $key=>$val) {
-                echo '<option value="'.$key.'">' . $val .
-                        '</option>';
-            }
-            ?>
+foreach ($categories as $key => $val) {
+    echo '<option value="' . $key . '">' . $val . '</option>';
+}
+?>
         </select>           
     </div>        
     <div><input class="btn btn-success" type="submit" value="Submit" /></div>
 </form>
 </div>
-<?php 
+<?php
 include 'includes/footer.php';
 ?>

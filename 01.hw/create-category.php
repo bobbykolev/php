@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pageTitle = "Create New Category";
 include 'includes/header.php';
 ?>
@@ -11,6 +11,6 @@ include 'includes/header.php';
     <div><input class="btn btn-success" type="submit" value="Submit" /></div>
 </form>
 </div>
-<?php 
+<?php
 include 'includes/footer.php';
 ?>
