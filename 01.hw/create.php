@@ -9,6 +9,12 @@ include 'includes/header.php';
   //Here I use the function edit_create(...) from constants.php file to avoid code repeating
    $postData = edit_create( $_POST['date'],  $_POST['product'],  $_POST['expense'],  $_POST['category']);
 	
+	if(!isValidDate($postData[0])){
+        echo '<p class="lead">Invalid Date. The format should be: YYYY-MM-DD</p>';
+		header("refresh:2;url=create-expense.php");
+        $postData[4]=true;
+    }
+	
     if(mb_strlen($postData[1])<4){
         echo '<p class="lead">The product name is too short.</p>';
 		header("refresh:2;url=create-expense.php");
