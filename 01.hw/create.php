@@ -3,7 +3,7 @@ $pageTitle = "New Expense";
 include 'includes/header.php';
 ?>
 
-<div class="hero-unit">
+<div class="hero-unit offset1 span10">
 <h1><?= $pageTitle; ?></h1>
   <?php 
     $date = trim($_POST['date']);

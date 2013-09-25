@@ -8,12 +8,20 @@ include 'includes/header.php';
     <?= $pageTitle; ?>
   </h1>
   <div class="right">
-    <form method="GET" action="">
+    <form method="GET">
       <select name="category" onchange="this.form.submit()">
         <option>Filter By Category</option>
         <?php
-	foreach ($categories as $key=>$val) {		
-			echo '<option value="'.$key.'">'. $val .'</option>';			
+		if (isset($_GET['category'])) {
+			$selected = $_GET['category'];
+		}
+	foreach ($categories as $key=>$val) {	
+	if($key == $selected){
+			echo '<option value="'.$key.'" selected="selected">'. $val .'</option>';
+		}else
+		{
+			echo '<option value="'.$key.'">'. $val .'</option>';
+		}
 	}
 	?>
       </select>

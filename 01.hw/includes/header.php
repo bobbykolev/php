@@ -1,5 +1,6 @@
 <?php ob_start(); 
-include 'includes/constants.php'
+include 'includes/constants.php';
+mb_internal_encoding('UTF-8');
 ?>
 <!DOCTYPE html>
 <html>

@@ -2,7 +2,7 @@
 $pageTitle = "Delete Expense";
 include 'includes/header.php';
 ?>
-<div class="hero-unit  offset1 span10">
+<div class="hero-unit offset1 span10">
 <h1><?= $pageTitle; ?></h1>
 
 <?php 
