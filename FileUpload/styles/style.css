@@ -1,0 +1,70 @@
+footer
+{
+	text-align: center;
+}
+.hero-unit h1
+{
+	font-size: 36px;
+	margin-bottom: 30px;
+	color: #55AB55;
+	text-shadow: 1px 1px 1px #555;
+}
+.table th
+{
+	color: #55AB55;
+}
+.label
+{
+	font-size: 16px;
+	padding: 4px;
+	margin-bottom: 4px;
+}
+input[type="date"], input[type="text"], input[type="number"], input[type="submit"], input[type="password"], select
+{
+	margin-bottom: 0;
+	float:right;
+}
+input[type="submit"]
+{
+	margin-top: 20px;
+}
+.navbar .brand
+{
+	color: #55AB55;
+}
+td
+{
+	max-width: 155px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#home-btn
+{
+	margin-top: 0;
+}
+.sum
+{
+	font-weight: bold;
+	color: #060;
+}
+.navbar .login-nav
+{
+	float: right;
+}
+.red
+{
+	color:red;
+}
+.green
+{
+	color: #55AB55;
+}
+div >.upl-btn
+{
+	float: left;
+}
+.forbidden
+{
+	margin-top: 24px;
+}
