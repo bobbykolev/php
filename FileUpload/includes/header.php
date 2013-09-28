@@ -35,16 +35,17 @@ mb_internal_encoding('UTF-8');
                                         <li><a href="file-upload.php">Upload</a></li>	
                                         <li class="divider-vertical"></li>	
 									</ul>
-                                    <ul class="nav login-nav">
-										<li class="divider-vertical"></li>
-										<li><a href="login-form.php">Login</a></li>
-                                        <li class="divider-vertical"></li>
-										<li><a href="register-form.php">Register</a></li>	
+                                    <ul id="out" class="nav login-nav">
                                         <li class="divider-vertical"></li>
                                         <li><a href="logout.php">Logout</a></li>	
-                                        <li class="divider-vertical"></li>
 									</ul>
-								</div>
+									<ul id="reg" class="nav login-nav">
+                                        <li class="divider-vertical"></li>
+										<li><a href="register-form.php">Register</a></li>
+                                        <li class="divider-vertical"></li>
+										<li><a href="login-form.php">Login</a></li>
+                                    </ul>								
+                                    </div>
         
       </div>
     </div>

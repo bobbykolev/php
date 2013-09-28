@@ -23,6 +23,8 @@ if ( !is_logged_in()) {
   </thead>
   <tbody>
 <?php
+$path = 'files'.DIRECTORY_SEPARATOR.$_SESSION['username'];
+if(file_exists($path)){
       $userFiles = scandir($path);
         for($i = 2; $i < count($userFiles); $i++) {
 
@@ -33,6 +35,7 @@ if ( !is_logged_in()) {
             echo '<tr><td>'.$link. $userFiles[$i] .'</a></td>
 					<td>'.$size.'</td></tr>';
         }
+		}
 	?>
     </tbody>
     </table>

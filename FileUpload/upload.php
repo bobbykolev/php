@@ -1,10 +1,11 @@
 <?php
 $pageTitle = "Upload";
 include 'includes/header.php';
-
+session_start();
 if(isset($_POST['fileUpload']))
 {
  if($_FILES) {
+	 $path = 'files'.DIRECTORY_SEPARATOR.$_SESSION['username'];
 	 if (!file_exists($path)) {
     mkdir($path, 0777, true);
 }
@@ -22,4 +23,5 @@ else{
 	echo '<p class="hero-unit red offset1 span4">Unsuccessfully uploaded!</p>';
 	header("refresh:2;url=file-upload.php");
 }
+include 'functions.php';
 include 'includes/footer.php';

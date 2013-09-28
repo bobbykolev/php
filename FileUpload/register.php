@@ -38,6 +38,13 @@ if (mb_strlen($password) < 6) {
     $error = true;
 }
 
+if (!is_new_user($username)) {
+    echo '<p class="hero-unit red offset1 span4">The username already exist.</p>';
+    header("refresh:2;url=register-form.php");
+    $error = true;
+}
+
+
 if (!$error) {
     $result = $username. '!' . $password;
     if (file_put_contents('users.txt', $result, FILE_APPEND)) {

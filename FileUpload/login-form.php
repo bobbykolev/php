@@ -17,5 +17,6 @@ include 'includes/header.php';
 </form>
 </div>
 <?php
+include 'functions.php';
 include 'includes/footer.php';
 ?>

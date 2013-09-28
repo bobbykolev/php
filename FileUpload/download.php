@@ -17,5 +17,5 @@ if(!$file){
     // read the file from disk
     readfile($file);
 }
-
+include 'functions.php';
 include 'includes/footer.php';

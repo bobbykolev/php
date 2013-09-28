@@ -1,5 +1,4 @@
 <?php
-mb_internal_encoding('UTF-8');
 function is_logged_in() {
 	return isset($_SESSION['username']);
 }
@@ -21,13 +20,12 @@ function is_valid_user($username, $password) {
 				return true;
 			}
 		}
-		var_dump(trim($userData[0]));
 		return false;
 	}	
 
 
 function is_new_user($username) {
-    $users =  users('users.txt');
+    $users =  data('users.txt');
 
     foreach ($users as $user) {
         $userData = explode('!', $user);
