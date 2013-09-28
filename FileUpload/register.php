@@ -26,7 +26,7 @@ if (isset($_POST['regForm'])) {
         $error = true;
     }
     
-    if (!strpos($password, '<') == false || !strpos($password, '!') == false || !strpos($password, '>') == false || strpos($password, '<') == 0 || strpos($password, '!') == 0 || strpos($password, '>') == 0) {
+    if (!strpos($password, '<') == false || !strpos($password, '!') == false || !strpos($password, '>') == false) {
         echo '<p class="hero-unit red offset1 span4">The pasword cannot contain !, &lt;, &gt;.</p>';
         header("refresh:2;url=register-form.php");
         $error = true;
