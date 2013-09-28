@@ -1,5 +1,4 @@
 <?php ob_start(); 
-include 'includes/constants.php';
 mb_internal_encoding('UTF-8');
 ?>
 <!DOCTYPE html>
@@ -45,8 +44,7 @@ mb_internal_encoding('UTF-8');
                                         <li class="divider-vertical"></li>
 										<li><a href="login-form.php">Login</a></li>
                                     </ul>								
-                                    </div>
-        
+         </div>
       </div>
     </div>
   </div>

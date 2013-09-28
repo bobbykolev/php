@@ -5,9 +5,9 @@ include 'functions.php';
 
 session_start();
 
-if ( !is_logged_in()) {
-	header('location: login-form.php');
-	die();
+if (!is_logged_in()) {
+    header('location: login-form.php');
+    die();
 }
 ?>
 <div class="hero-unit offset1 span10">
@@ -23,20 +23,20 @@ if ( !is_logged_in()) {
   </thead>
   <tbody>
 <?php
-$path = 'files'.DIRECTORY_SEPARATOR.$_SESSION['username'];
-if(file_exists($path)){
-      $userFiles = scandir($path);
-        for($i = 2; $i < count($userFiles); $i++) {
-
-            $size = formatSizeUnits(filesize($path . DIRECTORY_SEPARATOR . $userFiles[$i]));
-
-            $link = '<a href="download.php?file=' . $userFiles[$i] . '" >';
-
-            echo '<tr><td>'.$link. $userFiles[$i] .'</a></td>
-					<td>'.$size.'</td></tr>';
-        }
-		}
-	?>
+$path = 'files' . DIRECTORY_SEPARATOR . $_SESSION['username'];
+if (file_exists($path)) {
+    $userFiles = scandir($path);
+    for ($i = 2; $i < count($userFiles); $i++) {
+        
+        $size = formatSizeUnits(filesize($path . DIRECTORY_SEPARATOR . $userFiles[$i]));
+        
+        $link = '<a href="download.php?file=' . $userFiles[$i] . '" >';
+        
+        echo '<tr><td>' . $link . $userFiles[$i] . '</a></td>
+					<td>' . $size . '</td></tr>';
+    }
+}
+?>
     </tbody>
     </table>
 </div>

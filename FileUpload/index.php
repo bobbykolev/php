@@ -5,9 +5,9 @@ include 'functions.php';
 
 session_start();
 
-if ( !is_logged_in()) {
-	header('location: login-form.php');
-	die();
-}else{
-	header('location: files.php');
+if (!is_logged_in()) {
+    header('location: login-form.php');
+    die();
+} else {
+    header('location: files.php');
 }

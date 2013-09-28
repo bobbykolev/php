@@ -5,9 +5,9 @@ include 'functions.php';
 
 session_start();
 
-if ( !is_logged_in()) {
-	header('location: login-form.php');
-	die();
+if (!is_logged_in()) {
+    header('location: login-form.php');
+    die();
 }
 ?>
 <div class="hero-unit offset1 span10">
