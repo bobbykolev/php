@@ -25,6 +25,7 @@ if (!is_logged_in()) {
   <tbody>
 <?php
 $path = 'files' . DIRECTORY_SEPARATOR . $_SESSION['username'];
+
 if (file_exists($path)) {
     $files = scandir($path);
     for ($i = 2; $i < count($files); $i++) {
@@ -32,7 +33,6 @@ if (file_exists($path)) {
         $size = formatSizeUnits(filesize($path . DIRECTORY_SEPARATOR . $files[$i]));
         
         $link = '<a href="download.php?file=' . $files[$i] . '" >';
-        
         echo '<tr><td>' . $link . $files[$i] . '</a></td>
 					<td>' . $size . '</td>
 					<td><a href="delete.php?path=' . urlencode($files[$i]) . '" data-toggle="tooltip" title="Delete" onClick="return confirm(\'Are you sure you want to delete ' . $files[$i] . '?\')"><i class="icon-remove"></i></a></td></tr>';
