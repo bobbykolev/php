@@ -37,6 +37,12 @@ while ($row = mysqli_fetch_assoc($query)) {
   <h1>
     <?= $pageTitle; ?>
   </h1>
+ <?php 
+ if(empty($result))
+  {
+	  header("location: index.php");
+  }
+  else{?>
 <form method = "get"><table class="table table-stripped">
 <thead>
 <tr>
@@ -62,6 +68,7 @@ foreach ($result as $v) {
 ?>
 </tbody>
 </table></form>
+<?php } ?>
 </div>
 <?php
 include 'includes/footer.php';

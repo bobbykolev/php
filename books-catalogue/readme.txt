@@ -1,8 +1,7 @@
 Books Catalogue php project
 
 DEMO:
-soon
+http://www.bobbykolev.cloudvps.bg/php/books/index.php
 
-Note:
-
+Notes:
 create new database and import "books.sql"

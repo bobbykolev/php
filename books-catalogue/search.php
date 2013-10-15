@@ -38,7 +38,7 @@ and upper($field) LIKE'%$find%'");
     }
 ?>
 
-<table>
+<table class="table table-stripped">
 <thead>
 <tr>
 <th>Books</th>
@@ -55,7 +55,7 @@ and upper($field) LIKE'%$find%'");
     echo '</tbody></table>';
     $anymatches = mysqli_num_rows($data);
     if ($anymatches == 0) {
-        echo '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button>No results.</div><br>';
+        echo '<div class="alert alert-block"><button type="button" class="close" data-dismiss="alert">&times;</button>No results.</div><br>';
     }
 }
 ?>

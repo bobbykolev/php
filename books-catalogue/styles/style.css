@@ -37,10 +37,7 @@ margin: 2px 0 0 2px;
 }
 td
 {
-	max-width: 350px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+	word-wrap: break-word;
 }
 #home-btn
 {
