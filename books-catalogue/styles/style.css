@@ -1,0 +1,80 @@
+footer
+{
+	text-align: center;
+}
+.hero-unit h1
+{
+	font-size: 36px;
+	margin-bottom: 30px;
+	color: #55AB55;
+	text-shadow: 1px 1px 1px #555;
+}
+.table th
+{
+	color: #55AB55;
+}
+.label
+{
+	font-size: 16px;
+	padding: 4px;
+	margin-bottom: 4px;
+}
+input[type="date"], input[type="text"], input[type="number"], input[type="submit"], input[type="password"], select
+{
+	margin-bottom: 0;
+	float:right;
+}
+.nav li > form
+{
+	margin-top: 5px;
+}
+.navbar .btn, .add>.btn {
+margin: 2px 0 0 2px;
+}
+.navbar .brand
+{
+	color: #55AB55;
+}
+td
+{
+	max-width: 350px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#home-btn
+{
+	margin-top: 0;
+}
+.red
+{
+	color:red;
+}
+.green
+{
+	color: #55AB55;
+}
+.add
+{
+	max-width: 450px;
+}
+.navbar .search-nav
+{
+	float: right;
+}
+.add-ul
+{
+	list-style-type: none;
+}
+.add-ul li
+{
+	display: inherit;
+}
+#add-book-ul li:first-of-type
+{
+	margin-bottom: 70px;
+}
+.add-ul li .btn
+{
+	margin-top: 20px;
+}
