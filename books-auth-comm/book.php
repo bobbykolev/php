@@ -78,9 +78,10 @@ foreach ($result as $v) {
 if (is_logged_in()) {
 	if (isset($_POST['submitComment']))
 	{
-		$query = mysqli_query($connection, 'select user_id from users where users.username = ' . $_SESSION['username']);
-		$row = mysqli_fetch_assoc($query);
-		$userId = (int) $row['user_id'];
+		$uname = trim($_SESSION['username']);
+		$query = mysqli_query($connection, 'select user_id from users where users.username = \''.$uname.'\'');
+		$r = mysqli_fetch_assoc($query);
+		$userId = (int) $r['user_id'];
 		$comm = htmlspecialchars(trim($_POST['txt']));
 		$date = date("Y-m-d H:i:s");
 		$qAddComment = "insert into comments (comm_text, comm_date, book_id, user_id) values('" . mysqli_real_escape_string($connection, $comm) . "', '".$date. "', '".$book."', '".$userId."')";
