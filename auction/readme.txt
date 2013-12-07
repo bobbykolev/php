@@ -1,2 +1,3 @@
-паролата е по различен начин от твоя затова пращам база
-всички пароли са qwerty
+Simple php project - Auction
+
+DEMO: http://bobbykolev.cloudvps.bg/php/auction/index.php
